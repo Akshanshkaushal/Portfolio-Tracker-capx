@@ -1,5 +1,4 @@
- 
-import React, { useState, useEffect } from 'react';  
+import React, { useState, useEffect } from 'react';
 import AddStockModal from './AddstockModal';
 
 const StockList = () => {
@@ -7,23 +6,69 @@ const StockList = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedStock, setSelectedStock] = useState(null);
 
-  // Dummy stock data
-  const dummyStocks = [
-    { ticker: 'AAPL', name: 'Apple Inc.', currentPrice: 150.25 },
-    { ticker: 'GOOGL', name: 'Alphabet Inc.', currentPrice: 2750.0 },
-    { ticker: 'AMZN', name: 'Amazon.com Inc.', currentPrice: 3400.5 },
-    { ticker: 'MSFT', name: 'Microsoft Corporation', currentPrice: 299.99 },
-    { ticker: 'TSLA', name: 'Tesla Inc.', currentPrice: 720.15 },
-    { ticker: 'FB', name: 'Meta Platforms Inc.', currentPrice: 355.65 },
-    { ticker: 'NFLX', name: 'Netflix Inc.', currentPrice: 590.3 },
-    { ticker: 'NVDA', name: 'NVIDIA Corporation', currentPrice: 220.4 },
-    { ticker: 'JPM', name: 'JPMorgan Chase & Co.', currentPrice: 160.75 },
-    { ticker: 'V', name: 'Visa Inc.', currentPrice: 230.8 },
+  // List of tickers to fetch data
+  const symbols = [
+    'TSCO.LON',
+    'SHOP.TRT',
+    'GPV.TRV',
+    'MBG.DEX',
+    '600104.SHH',
+    '000002.SHZ',
   ];
 
+  const API_KEY = 'demo';
+  const STOCK_API_URL = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&outputsize=full&apikey=' + API_KEY;
+  
+  // Func fetch stock data from the API
+  const fetchStockData = async () => {
+    const fetchedStocks = [];
+    for (const symbol of symbols) {
+      try {
+        const response = await fetch(STOCK_API_URL.replace('{symbol}', symbol));
+        const data = await response.json();
+        if (data["Meta Data"] && data["Time Series (Daily)"]) {
+          const lastDate = Object.keys(data["Time Series (Daily)"])[0];
+          const closePrice = parseFloat(data["Time Series (Daily)"][lastDate]["4. close"]);
+          fetchedStocks.push({
+            ticker: symbol,
+            name: data["Meta Data"]["2. Symbol"],
+            currentPrice: closePrice,
+          });
+        } else {
+          console.warn(`No data available for symbol: ${symbol}`);
+        }
+      } catch (error) {
+        console.error(`Failed to fetch data for symbol: ${symbol}`, error);
+      }
+    }
+
+    // Cache the data in localStorage for 1 hour
+    localStorage.setItem('stocks', JSON.stringify({
+      data: fetchedStocks,
+      timestamp: Date.now(),
+    }));
+    
+    setStocks(fetchedStocks);
+  };
+
   useEffect(() => {
-    setStocks(dummyStocks);
-  }, []);
+    // Check if cached data exists and is less than 1 hour old
+    const cachedData = localStorage.getItem('stocks');
+    if (cachedData) {
+      const parsedData = JSON.parse(cachedData);
+      const cacheDuration = 60 * 60 * 1000; // 1 hour in milliseconds
+      if (Date.now() - parsedData.timestamp < cacheDuration) {
+        // Use cached data
+        setStocks(parsedData.data);
+      } else {
+        // Cache is expired, fetch new data
+        fetchStockData();
+      }
+    } else {
+      // No cached data, fetch from API
+      fetchStockData();
+    }
+  }, []); // Run only once on component mount
 
   const handleAddStock = (stock) => {
     setSelectedStock(stock);
@@ -35,8 +80,8 @@ const StockList = () => {
   };
 
   const handleAddStockSubmit = (stockData) => {
-    console.log('Stock added:', stockData);  // You can handle the addition logic here
-    setShowModal(false);  // Close modal after adding stock
+    console.log('Stock added:', stockData);
+    setShowModal(false);
   };
 
   return (
@@ -67,7 +112,9 @@ const StockList = () => {
           ))}
         </ul>
         {stocks.length === 0 && (
-          <p className="text-gray-500 text-center mt-6">No stocks available at the moment.</p>
+          <p className="text-gray-500 text-center mt-6">
+            api is fetching in current time, but All are demo prices, Fetching api for a particular symbol one by one because multi-symbol was a premium api, so please be patient it would take time, sorry for inconvenience. 25 req/day is the limit for the standard free API!
+          </p>
         )}
       </div>
 
