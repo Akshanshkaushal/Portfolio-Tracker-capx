@@ -2,6 +2,21 @@
 
 A comprehensive portfolio tracker application that allows users to manage their stock portfolio, fetch stock prices, and calculate portfolio value. Built with a robust frontend and backend, the application provides seamless integration of portfolio management and stock price fetching.
 
+# Portfolio Tracker - Project Showcase 🎥
+
+Explore the user interface and functionality of the **Portfolio Tracker** project! This video demonstrates the seamless workflow, including adding stocks, managing portfolios, and visualizing data.
+
+## Watch the Demo Video 📹
+<div align="center">
+  <a href="https://www.loom.com/share/c81486b84cf44c21a8bed709422236a9?sid=b5a1bad9-d443-4dca-abcb-a70e65075f1d" target="_blank">
+    <img src="frontend/public/graph.png" alt="Portfolio Tracker Demo Video" style="width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+  </a>
+  <p style="font-size: 1rem; color: #666; margin-top: 10px;">
+    <strong>Click on the image to watch the video.</strong>
+  </p>
+</div>
+
+
 ## Features
 
 - **Portfolio Management**: Add, update, fetch, and delete stocks in your portfolio.
