@@ -55,8 +55,11 @@ To get started with the application, you'll need to install the necessary depend
 
 ### API Keys:
 
-- You will need an API key from [Alpha Vantage](https://www.alphavantage.co/support/#api-key) to fetch stock prices.
-- Add your API key to the `config/apiKeys.js` file in the backend.
+- You will need an API key from [Alpha Vantage](https://www.alphavantage.co/documentation/) to fetch stock prices.
+- Add your API key to the `PortfolioDashboard.js` file in the frontend.
+- <div align="center">
+  <img src="./frontend/public/api_key.png" alt="Main Functionality" width="600"/>
+</div>
 
 ### Environment Variables:
 
