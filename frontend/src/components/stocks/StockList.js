@@ -26,17 +26,21 @@ const StockList = () => {
       try {
         const response = await fetch(STOCK_API_URL.replace('{symbol}', symbol));
         const data = await response.json();
+
         if (data["Meta Data"] && data["Time Series (Daily)"]) {
           const lastDate = Object.keys(data["Time Series (Daily)"])[0];
           const closePrice = parseFloat(data["Time Series (Daily)"][lastDate]["4. close"]);
+
           fetchedStocks.push({
             ticker: symbol,
             name: data["Meta Data"]["2. Symbol"],
             currentPrice: closePrice,
           });
+
         } else {
           console.warn(`No data available for symbol: ${symbol}`);
         }
+        
       } catch (error) {
         console.error(`Failed to fetch data for symbol: ${symbol}`, error);
       }
