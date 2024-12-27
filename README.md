@@ -6,15 +6,33 @@ A comprehensive portfolio tracker application that allows users to manage their 
 
 Explore the user interface and functionality of the **Portfolio Tracker** project! This video demonstrates the seamless workflow, including adding stocks, managing portfolios, and visualizing data.
 
-## Watch the Demo Video 📹
-<div align="center">
+# 🎥 **MUST-WATCH: Portfolio Tracker - Live Demo** 🎥
+
+🚀 **Experience the magic of Portfolio Tracker in action!** See how easy it is to manage your stocks, visualize your portfolio, and make smart financial decisions.  
+
+---
+
+<div align="center" style="border: 2px solid #FFD700; padding: 20px; border-radius: 10px; background-color: #FFFBEA;">
   <a href="https://www.loom.com/share/c81486b84cf44c21a8bed709422236a9?sid=b5a1bad9-d443-4dca-abcb-a70e65075f1d" target="_blank">
-    <img src="frontend/public/graph.png" alt="Portfolio Tracker Demo Video" style="width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="frontend/public/graph.png" alt="Portfolio Tracker Demo Video" style="width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
   </a>
-  <p style="font-size: 1rem; color: #666; margin-top: 10px;">
-    <strong>Click on the image to watch the video.</strong>
+  <h2 style="color: #FF4500; margin-top: 15px;">
+    👉 CLICK THE IMAGE TO WATCH THE VIDEO 👈
+  </h2>
+  <p style="font-size: 1.1rem; color: #333; margin-top: 10px;">
+    <strong>Discover the intuitive interface, key features, and powerful tools in just a few minutes!</strong>
   </p>
 </div>
+
+---
+
+🌟 **Why Watch This Demo?**
+- Learn how to **add stocks** effortlessly to your portfolio.
+- See how to **visualize your portfolio metrics** for better decision-making.
+- Explore features like **real-time graphing**, **editing**, and **deleting stocks**. 
+
+🔗 **Don’t miss out! [Watch the full video now.](https://www.loom.com/share/c81486b84cf44c21a8bed709422236a9?sid=b5a1bad9-d443-4dca-abcb-a70e65075f1d)**  
+
 
 
 ## Features
