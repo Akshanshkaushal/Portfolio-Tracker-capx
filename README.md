@@ -108,7 +108,7 @@ cd frontend
 npm start
 ```
 
-### Backedn:
+### Backend:
 To start the backend, run the following commands:
 
 ```bash
