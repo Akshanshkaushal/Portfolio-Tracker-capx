@@ -72,7 +72,104 @@ cd frontend
 npm start
 ```
 
-## API Documentation
+### Backedn:
+To start the backend, run the following commands:
 
-For a complete and interactive API documentation, visit the live documentation here:  
-[Portfolio Tracker API Docs](https://portfolio-tracker-backend-keer.onrender.com/api-docs/)
+```bash
+cd backend
+npm start
+```
+
+## 🚀 API Documentation
+
+Explore the complete and interactive API documentation through the live link below:
+
+🔗 [**Portfolio Tracker API Docs**](https://portfolio-tracker-backend-keer.onrender.com/api-docs/)
+
+### 📄 API Functionality Overview
+
+Below are some snapshots of the API functionality to help you understand its features:
+
+#### API Documentation Interface
+![API Documentation Interface](./frontend/public/api.png)
+
+#### Example of a GET Request
+![GET Request Example](./frontend/public/get.png)
+
+## 🎨 User Interface Walkthrough
+
+Below is a step-by-step guide to navigating through the main features of the **Portfolio Tracker** application, with accompanying visuals to help you understand the workflow.
+
+---
+
+### 1️⃣ **Main Interface**
+The main interface provides an overview of your portfolio and key functionalities. You can navigate to add stocks, view portfolio metrics, and analyze graphs.
+
+<div align="center">
+  <img src="./frontend/public/main.png" alt="Main Functionality" width="600"/>
+</div>
+
+---
+
+### 2️⃣ **Adding a Stock**
+To add a stock:
+- Click the "Add Stock" button.
+- Enter the stock details, including **name**, **ticker symbol**, **quantity**, and **buy price**.
+- Click **Submit** to add the stock to your portfolio.
+
+<div align="center">
+  <img src="./frontend/public/add.png" alt="Add Functionality" width="600"/>
+</div>
+
+---
+
+### 3️⃣ **Dashboard and Portfolio Metrics**
+Once stocks are added, the dashboard displays a summary of your portfolio with key metrics like **total value**, **number of stocks**, and their current market value.
+
+<div align="center">
+  <img src="./frontend/public/dash1.png" alt="Dashboard Functionality" width="600"/>
+</div>
+
+---
+
+### 4️⃣ **Graphical Analysis**
+Analyze your portfolio's performance over time with interactive graphs. The graph provides insights into trends and allows for better investment decision-making.
+
+<div align="center">
+  <img src="./frontend/public/graph.png" alt="Graph Functionality" width="600"/>
+</div>
+
+---
+
+### 5️⃣ **Viewing Portfolio Stocks**
+The detailed portfolio section lists all stocks, including their **name**, **ticker**, **quantity**, **buy price**, and **current market price**.
+
+<div align="center">
+  <img src="./frontend/public/portfolio_stoks.png" alt="Portfolio Stocks Functionality" width="600"/>
+</div>
+
+---
+
+### 6️⃣ **Edit and Delete Functionality**
+- **Edit**: Modify stock details (e.g., quantity or buy price) to keep your portfolio updated.
+- **Delete**: Remove unwanted stocks from your portfolio with a single click.
+
+<div align="center">
+  <img src="./frontend/public/edit.png" alt="Edit Functionality" width="600"/>
+</div>
+
+---
+
+### 📋 **Steps to Use the Application**
+1. **Navigate to the Main Interface**: Begin at the main dashboard to get an overview of your portfolio.
+2. **Add a Stock**: Use the "Add Stock" feature to include new investments in your portfolio.
+3. **View Portfolio Metrics**: Access the dashboard to track your portfolio's total value and individual stock details.
+4. **Analyze Performance**: Use the graphical insights for performance trends and predictions.
+5. **Edit or Delete**: Modify stock details or remove stocks as necessary to maintain accuracy.
+
+---
+
+This guide ensures a smooth user experience while utilizing all the features of the Portfolio Tracker app. Explore and make the most of your investments!
+
+
+
