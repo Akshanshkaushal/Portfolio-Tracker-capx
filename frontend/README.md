@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+ # Portfolio Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive portfolio tracker application that allows users to manage their stock portfolio, fetch stock prices, and calculate portfolio value. Built with a robust frontend and backend, the application provides seamless integration of portfolio management and stock price fetching.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Portfolio Management**: Add, update, fetch, and delete stocks in your portfolio.
+- **Stock Price Integration**: Get real-time stock prices using the Alpha Vantage API.
+- **Portfolio Value Calculation**: Calculate the total value of your portfolio based on the latest stock prices.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. [Install Dependencies](#install-dependencies)
+2. [Configuration](#configuration)
+3. [Run the Application Locally](#run-the-application-locally)
+4. [API Documentation](#api-documentation)
+5. [Deployment Links](#deployment-links)
+6. [Contributing](#contributing)
+7. [License](#license)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Install Dependencies
 
-### `npm test`
+To get started with the application, you'll need to install the necessary dependencies for both the frontend and backend.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend Setup:
 
-### `npm run build`
+1. Navigate to the `frontend` directory:
+    ```bash
+    cd frontend
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install the dependencies:
+    ```bash
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend Setup:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Navigate to the `backend` directory:
+    ```bash
+    cd backend
+    ```
 
-### `npm run eject`
+2. Install the dependencies:
+    ```bash
+    npm install
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Configuration
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### MySQL Setup:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Create a MySQL database for the application.
+- Configure the database credentials in the `config/database.js` file for backend setup.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### API Keys:
 
-## Learn More
+- You will need an API key from [Alpha Vantage](https://www.alphavantage.co/support/#api-key) to fetch stock prices.
+- Add your API key to the `config/apiKeys.js` file in the backend.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Environment Variables:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Add necessary environment variables to `.env` files for both the frontend and backend, such as database credentials and API keys.
 
-### Code Splitting
+## Run the Application Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Frontend:
+To start the frontend, run the following commands:
 
-### Analyzing the Bundle Size
+```bash
+cd frontend
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## API Documentation
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For a complete and interactive API documentation, visit the live documentation here:  
+[Portfolio Tracker API Docs](https://portfolio-tracker-backend-keer.onrender.com/api-docs/)
