@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../utils/api';
-import PortfolioChart from './PortfolioChart';
-import PortfolioSummary from './PortfolioSummary';
+import PortfolioChart from './PortfolioChart'; 
 
-const API_KEY = 'demo'; // used demo api as actual was having a limited request/day for standard version
 const STOCK_API_URL = 'https://www.alphavantage.co/query';
+const API_KEY = process.env.API_KEY; 
 
 const PortfolioDashboard = () => {
   const [totalValue, setTotalValue] = useState(0);
