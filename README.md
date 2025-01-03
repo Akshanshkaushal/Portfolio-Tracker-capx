@@ -133,6 +133,19 @@ Below are some snapshots of the API functionality to help you understand its fea
 #### Example of a GET Request
 ![GET Request Example](./frontend/public/get.png)
 
+## ⚠️ Assumptions and Limitations
+
+Please note the following assumptions and limitations for the demo version of the CapX application:
+
+1. **One Stock Only**: For demo purposes, you can add only one stock, with a quantity set to 1. This is to keep the demo simple and focused on showcasing core functionality.
+  
+2. **No Authentication**: The application currently supports only one user and does not include authentication. This is solely for demo purposes, and user management will be implemented in future versions.
+
+3. **Simplified UI**: The user interface is intentionally kept simple and clear to provide a better understanding of the functionality. A more visually attractive design will be added later without compromising usability.
+
+We appreciate your understanding as we continue to enhance the platform! 🚀
+
+
 ## 🎨 User Interface Walkthrough
 
 Below is a step-by-step guide to navigating through the main features of the **Portfolio Tracker** application, with accompanying visuals to help you understand the workflow.
