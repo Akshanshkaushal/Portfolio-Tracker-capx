@@ -33,9 +33,8 @@ Explore the user interface and functionality of the **Portfolio Tracker** projec
 
 🔗 **Don’t miss out! [Watch the full video now.](https://www.loom.com/share/c81486b84cf44c21a8bed709422236a9?sid=b5a1bad9-d443-4dca-abcb-a70e65075f1d)**  
 
-Our application has been deployed and is live! You can check it out here:
-
-[**CapX Deployed Application**](https://capxdeployed.vercel.app/)
+**🎉 Our application has been deployed and is live! Check it out and explore the features now:**
+### **[🌟 Click here to try the CapX Deployed Application! 🌟](https://capxdeployed.vercel.app/)**
 
 ## Features
 
